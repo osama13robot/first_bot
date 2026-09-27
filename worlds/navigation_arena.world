@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="navigation_arena">
+    <include><uri>model://sun</uri></include>
+    <include><uri>model://ground_plane</uri></include>
+    <physics type="ode"><max_step_size>0.001</max_step_size><real_time_update_rate>1000</real_time_update_rate></physics>
+    <gui><camera name="user_camera"><pose>5 -6 5 0 0.5 2.4</pose></camera></gui>
+    <model name="wall_north"><static>true</static><link name="link"><collision name="collision"><geometry><box><size>8 0.15 0.5</size></box></geometry></collision><visual name="visual"><geometry><box><size>8 0.15 0.5</size></box></geometry><material><diffuse>0.25 0.25 0.28 1</diffuse></material></visual></link><pose>0 4 0.25 0 0 0</pose></model>
+    <model name="wall_south"><static>true</static><link name="link"><collision name="collision"><geometry><box><size>8 0.15 0.5</size></box></geometry></collision><visual name="visual"><geometry><box><size>8 0.15 0.5</size></box></geometry></visual></link><pose>0 -4 0.25 0 0 0</pose></model>
+    <model name="wall_east"><static>true</static><link name="link"><collision name="collision"><geometry><box><size>0.15 8 0.5</size></box></geometry></collision><visual name="visual"><geometry><box><size>0.15 8 0.5</size></box></geometry></visual></link><pose>4 0 0.25 0 0 0</pose></model>
+    <model name="wall_west"><static>true</static><link name="link"><collision name="collision"><geometry><box><size>0.15 8 0.5</size></box></geometry></collision><visual name="visual"><geometry><box><size>0.15 8 0.5</size></box></geometry></visual></link><pose>-4 0 0.25 0 0 0</pose></model>
+    <model name="obstacle_1"><static>true</static><link name="link"><collision name="collision"><geometry><box><size>1.5 0.35 0.45</size></box></geometry></collision><visual name="visual"><geometry><box><size>1.5 0.35 0.45</size></box></geometry><material><diffuse>0.7 0.25 0.1 1</diffuse></material></visual></link><pose>0 1.2 0.225 0 0 0</pose></model>
+    <model name="obstacle_2"><static>true</static><link name="link"><collision name="collision"><geometry><box><size>0.35 1.8 0.45</size></box></geometry></collision><visual name="visual"><geometry><box><size>0.35 1.8 0.45</size></box></geometry><material><diffuse>0.1 0.45 0.7 1</diffuse></material></visual></link><pose>-1.5 -1.0 0.225 0 0 0</pose></model>
+  </world>
+</sdf>
